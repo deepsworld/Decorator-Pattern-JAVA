@@ -36,7 +36,7 @@ public class BasicReceipt implements Receipt {
                             "----------------------------" +
                             items.printItems() + "\n\n" +
                             "Total Sale" + "\t\t " + String.format("$ %.2f",total) + "\n\n" +
-                            store_header.getStateCode() + " Sales Tax(" +String.format("%.3f",taxAmount/total) + ")" + "\t\t " + String.format("$ %.2f", taxAmount) + "\n\n" +
+                            store_header.getStateCode() + " Sales Tax(" + (taxAmount/total)*100 + "%)" + "\t\t " + String.format("$ %.2f", taxAmount) + "\n\n" +
                             "CUSTOMER OWES" + "\t\t" + String.format("$ %.2f", (total + taxAmount)) + "\n" +
                             "\n----------------------------");
     }
